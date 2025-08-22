@@ -6,12 +6,12 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-import Inicio from "./pages/Inicio";
 import Dashboard from "./pages/Dashboard";
 import Configuracoes from "./pages/Configuracoes";
 import AdminDashboard from "./pages/AdminDashboard";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+
 
 const queryClient = new QueryClient();
 
@@ -28,7 +28,7 @@ function AppRoutes() {
         path="/" 
         element={
           <ProtectedRoute>
-            {isAdmin ? <AdminDashboard /> : isClient ? <Inicio /> : <Inicio />}
+            {isAdmin ? <AdminDashboard /> : <Dashboard />}
           </ProtectedRoute>
         } 
       />
