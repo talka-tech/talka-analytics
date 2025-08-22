@@ -88,8 +88,11 @@ export default function Dashboard() {
           {/* Banner de acesso especial */}
           <div className="relative mb-8">
             <div className="absolute inset-0 z-10 flex items-center justify-center">
-              <div className="backdrop-blur-md bg-black/40 rounded-xl w-full h-full flex flex-col items-center justify-center p-8 border-2 border-dashed border-accent">
-                <h2 className="text-2xl font-bold mb-2 text-white drop-shadow">Acesse métricas avançadas!</h2>
+              <div
+                className="backdrop-blur-md bg-black/40 rounded-xl w-full h-full flex flex-col items-center justify-center p-8 border-2 border-dashed"
+                style={{ borderColor: client.color || '#4f46e5' }}
+              >
+                <h2 className="text-2xl font-bold mb-2 text-white drop-shadow">Acesse métricas avançadas</h2>
                 <p className="mb-4 text-white/80">Assine o pacote especial para liberar todas as métricas e relatórios detalhados.</p>
                 <Button style={{ background: client.color || '#4f46e5', color: '#fff', fontWeight: 600, fontSize: 18 }} className="px-8 py-3 hover:opacity-90 shadow-lg">
                   Solicitar acesso especial
@@ -176,111 +179,7 @@ export default function Dashboard() {
           </div>
           {/* --- Fim conteúdo da página de Início --- */}
 
-          {/* --- Conteúdo original do Dashboard --- */}
-          <div className="space-y-2 pt-12">
-            <h1 className="text-3xl font-bold" style={{ color: clientColor }}>
-              Dashboard BI
-            </h1>
-            <p className="text-muted-foreground">
-              Análises avançadas e relatórios de consumo integrados
-            </p>
-          </div>
-
-          {/* Indicador de Integração Futura */}
-          <Card style={{ borderColor: cardBorder, background: cardBg }} className="animate-fade-in">
-            <CardHeader className="text-center">
-              <div className="mx-auto h-12 w-12 rounded-lg flex items-center justify-center mb-4" style={{ background: cardBg }}>
-                <BarChart3 className="h-6 w-6" style={{ color: clientColor }} />
-              </div>
-              <CardTitle className="text-xl" style={{ color: clientColor }}>Dashboard BI em Desenvolvimento</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center space-y-4">
-              <p className="text-muted-foreground">
-                Esta seção será integrada com ferramentas de Business Intelligence como Looker 
-                para fornecer análises avançadas e insights detalhados sobre consumo e performance.
-              </p>
-              
-              <div className="grid gap-4 md:grid-cols-3 mt-6">
-                <div className="p-4 rounded-lg border" style={{ borderColor: cardBorder, background: cardBg }}>
-                  <BarChart3 className="h-8 w-8 mb-2 mx-auto" style={{ color: clientColor }} />
-                  <h3 className="font-medium text-sm" style={{ color: clientColor }}>Relatórios Avançados</h3>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Gráficos interativos e métricas personalizadas
-                  </p>
-                </div>
-                
-                <div className="p-4 rounded-lg border" style={{ borderColor: cardBorder, background: cardBg }}>
-                  <Building2 className="h-8 w-8 mb-2 mx-auto" style={{ color: clientColor }} />
-                  <h3 className="font-medium text-sm" style={{ color: clientColor }}>Análise Multi-Cliente</h3>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Comparativos e benchmarks entre empresas
-                  </p>
-                </div>
-                
-                <div className="p-4 rounded-lg border" style={{ borderColor: cardBorder, background: cardBg }}>
-                  <FileText className="h-8 w-8 mb-2 mx-auto" style={{ color: clientColor }} />
-                  <h3 className="font-medium text-sm" style={{ color: clientColor }}>Exportação</h3>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Relatórios em PDF, Excel e integração via API
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <Button style={{ background: clientColor, color: '#fff' }} className="hover:opacity-90">
-                  Solicitar Acesso Beta
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Preview de Features */}
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card className="animate-slide-up" style={{ borderColor: cardBorder, background: cardBg }}>
-              <CardHeader>
-                <CardTitle className="text-lg" style={{ color: clientColor }}>Próximas Funcionalidades</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="h-2 w-2 rounded-full" style={{ background: clientColor }}></div>
-                    <span className="text-sm">Dashboards personalizáveis</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-2 w-2 rounded-full" style={{ background: clientColor }}></div>
-                    <span className="text-sm">Alertas inteligentes via e-mail/SMS</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-2 w-2 rounded-full" style={{ background: clientColor }}></div>
-                    <span className="text-sm">Previsões de consumo com IA</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="h-2 w-2 rounded-full" style={{ background: clientColor }}></div>
-                    <span className="text-sm">Integração com Looker/Tableau</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="animate-slide-up" style={{ borderColor: cardBorder, background: cardBg }}>
-              <CardHeader>
-                <CardTitle className="text-lg" style={{ color: clientColor }}>Suporte Técnico</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Para integração e configuração do Dashboard BI, entre em contato com nossa equipe especializada.
-                </p>
-                <div className="space-y-2">
-                  <Button variant="outline" size="sm" className="w-full justify-start" style={{ borderColor: cardBorder, color: clientColor }}>
-                    📧 bi@talka.com.br
-                  </Button>
-                  <Button variant="outline" size="sm" className="w-full justify-start" style={{ borderColor: cardBorder, color: clientColor }}>
-                    📞 (11) 9999-9999 ramal 200
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* --- Conteúdo original do Dashboard removido conforme solicitado --- */}
         </div>
       </div>
     </Layout>
