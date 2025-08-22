@@ -99,7 +99,7 @@ export function AppSidebar() {
           {!collapsed && (
             <div className="flex-1">
               <h1 className="font-bold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                Tarifador{productName ? ` ${productName}` : ' Talka'}
+                Talka Analytics{productName ? ` ${productName}` : '' }
               </h1>
             </div>
           )}

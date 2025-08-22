@@ -304,7 +304,7 @@ export default function Configuracoes() {
                     style={{ borderColor: clientColor, borderWidth: 1 }}
                     onClick={() => {
                       const phoneNumber = "5581991085679"
-                      const message = "Olá, tive um problema com o Tarifador da Talka"
+                      const message = "Olá, tive um problema com o Talka Analytics"
                       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
                       window.open(whatsappUrl, '_blank')
                     }}

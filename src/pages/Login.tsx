@@ -145,7 +145,7 @@ export default function Login() {
                 />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white">Tarifador Talka</h1>
+                <h1 className="text-3xl font-bold text-white">Talka Analytics</h1>
                 <p className="text-purple-200 text-sm">Controle de créditos e métricas BI</p>
               </div>
             </div>
@@ -222,7 +222,7 @@ export default function Login() {
               />
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-white">Tarifador Talka</h1>
+              <h1 className="text-3xl font-bold text-white">Talka Analytics</h1>
               <p className="text-purple-200">Controle de créditos e métricas BI</p>
             </div>
           </div>

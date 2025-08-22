@@ -61,7 +61,7 @@ export function Layout({ children }: LayoutProps) {
                 className="text-lg font-semibold"
                 style={clientColor ? { color: clientColor } : undefined}
               >
-                Tarifador + Business Intelligence
+                Analytics + Business Intelligence
               </h2>
             </div>
           </header>
