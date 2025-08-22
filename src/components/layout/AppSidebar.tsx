@@ -30,29 +30,8 @@ export function AppSidebar() {
     return user?.name || client?.name || 'Cliente'
   }
 
-  // Navigation items based on user role
-  const navigation = isAdmin ? [
-    {
-      title: "Painel Admin",
-      url: "/",
-      icon: Shield,
-    },
-    {
-      title: "Gerenciar Usuários",
-      url: "/admin",
-      icon: Users,
-    },
-    {
-      title: "Configurações",
-      url: "/configuracoes",
-      icon: Settings,
-    },
-  ] : [
-    {
-      title: "Início",
-      url: "/",
-      icon: Home,
-    },
+  // Sidebar: apenas Dashboard BI e Configurações
+  const navigation = [
     {
       title: "Dashboard BI",
       url: "/dashboard",
@@ -63,7 +42,7 @@ export function AppSidebar() {
       url: "/configuracoes",
       icon: Settings,
     },
-  ]
+  ];
 
   // White label: cor e logo do cliente
   const clientColor = !isAdmin && client?.color ? client.color : undefined;
